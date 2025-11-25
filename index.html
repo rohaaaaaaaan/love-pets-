@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Chooser</title>
+
+    <style>
+        /* Page Background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #444444;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #f8c8d8, #d6b2ff);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Navigation Menu */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+            display: inline;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #f4b6c2;
+            transform: translateY(-4px);
+        }
+
+        /* Drop-down Menu */
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 30px;
+            background: #d6b2ff;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        nav ul ul li {
+            width: 200px;
+        }
+
+        nav ul ul a {
+            color: #444;
+        }
+
+        nav ul ul a:hover {
+            background-color: #f8c8d8;
+            transform: translateY(-2px);
+        }
+
+        /* Main content */
+        main {
+            padding: 25px;
+        }
+
+        h2 {
+            color: #d6b2ff;
+        }
+
+        /* Pet list styling */
+        ul.pet-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.pet-list li {
+            background-color: #f8c8d8;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        ul.pet-list li:hover {
+            background-color: #d6b2ff;
+            transform: translateX(12px);
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #f4b6c2;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #d6b2ff;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(90deg, #d6b2ff, #f8c8d8);
+            color: white;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+            transition: transform 0.3s;
+        }
+
+        footer a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Pet Chooser</h1>
+        <p>Find your perfect pet companion!</p>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="quiz.html">Take the Quiz</a></li> <!-- Link to the second page -->
+                <li><a href="#contact">Contact</a></li>
+
+                <!-- Drop-down Menu for "More" -->
+                <li>
+                    <a href="#">More</a>
+                    <ul>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section id="about">
+            <h2>About This Website</h2>
+            <p>This website helps you choose the right pet based on your preferences and lifestyle.</p>
+        </section>
+
+        <section id="pets">
+            <h2>Types of Pets</h2>
+            <ul class="pet-list">
+                <li>Dogs</li>
+                <li>Cats</li>
+                <li>Birds</li>
+                <li>Reptiles</li>
+            </ul>
+        </section>
+
+        <section id="comparison">
+            <h2>Pet Comparison Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pet Type</th>
+                        <th>Size</th>
+                        <th>Average Lifespan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dog</td>
+                        <td>Medium–Large</td>
+                        <td>10–15 years</td>
+                    </tr>
+                    <tr>
+                        <td>Cat</td>
+                        <td>Small–Medium</td>
+                        <td>12–18 years</td>
+                    </tr>
+                    <tr>
+                        <td>Parrot</td>
+                        <td>Small–Medium</td>
+                        <td>20–30 years</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section id="gallery">
+            <h2>Pet Gallery</h2>
+            <div class="gallery">
+                <img src="dog.jpg" alt="Dog">
+                <img src="cat.jpg" alt="Cat">
+                <img src="bird.jpg" alt="Bird">
+                <img src="parrot.jpg" alt="Parrot">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need recommendations, feel free to reach out!</p>
+            <button class="btn">Get in Touch</button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Pet Chooser | <a href="#top">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
